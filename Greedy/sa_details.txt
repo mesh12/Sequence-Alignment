@@ -1,0 +1,59 @@
+Code details
+
+Headers used
+
+#include<stdio.h>
+#include<string.h>
+#include<sys/time.h>
+
+Functions used
+
+assembly:This function calculates the score of each fragment with the other and
+         and stores the score in a 2D matrix.The maximum score and its corresponding
+         row and column are found.
+         
+assemblyProcess:Begins the loop for the greedy algorithm.Finds the maximum of the row
+		and column
+		
+merge:The alignment of the two strings is found and merged.The resulting string is stored 
+      in the row which is the maximum of the row and column found in assemblyProcess.
+      Every sequence is stored in the maximum row and hence the matrix will have at the 
+      end of sequencing one row with the final assembled string
+
+changeS:Once two sequences have been merged the corresponding score matrix needs to reflect
+        these changes.So a row and column has to be removed.This function does that.
+        
+score:This function implements dynamic programming to find the score of two strings.
+      It calculates score by comparing 3 values around a matrix cell and cumulatively
+      assigns a score 2 for match and -1 for a gap.
+      The maximum value is found which is the score.
+      
+simval:Used in score.It returns 2 for match or -1 otherwise
+
+alignment:Aligns two strings.
+          The matrix is backtracked and accordingly aligned.If the maximum of the three
+          cells around the current element processed lies on the diagonal it is a match.
+          If it lies on the previous row a gap is inserted in the second sequence and vice
+          versa if the value lies in the previous column.
+          
+reverse:Reverses two strings .Needed after alignment as the string obtained is in
+        reverse order.
+        
+Max:Finds the maximum of three elements .Used in score and alignment
+
+Variables used
+
+Trivial:i,j,k,x,t,q,temp,val
+Used in loops,temporary storage
+
+n:Number of strings
+test:number of test cases
+input[][]:matrix used to store input strings and finally the assembled sequence
+M[][]:Will contain the matrix used to find score
+S[][]:The score matrix 
+A[]:Alignment of first string
+B[]:Alignment of second string
+new:maximum of maximum row and column obtained from assembly
+mod:The minimum of maximum row and column obtained from assembly
+maxi:maximum row obtained in assembly and changeS 
+maxj:maximum column obtained in assembly and changeS
