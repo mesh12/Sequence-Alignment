@@ -1,0 +1,21 @@
+
+RESULT:  ADABRAC
+Total time = 0.000108 seconds
+
+RESULT:  AAAACCTC
+Total time = 0.035031 seconds
+
+RESULT:  AAAAGCA
+Total time = 0.071546 seconds
+
+RESULT:  AAAAGCA
+Total time = 0.114823 seconds
+
+RESULT:  AAAAGCA
+Total time = 0.165206 seconds
+
+RESULT:  AAAAAc
+Total time = 0.009459 seconds
+
+RESULT:  CGCTTACC
+Total time = 0.611021 seconds

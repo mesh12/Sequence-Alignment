@@ -1,0 +1,21 @@
+This program has 5 files
+
+tree.h has all the function prototypes ,the structure required to build the tree and
+the header files stdio.h,string.h and stdlib.h
+
+k-mer.c is the main function.Here the fragments are taken as inputs and are split into
+k-mers which are as when they are computed, inserted into the binary search tree to remove 
+duplicates.
+
+tree_f.c is the file containing all tree functions.It inserts into the tree recursively
+and while traversing stores the unique k-mers into a 2D array by calling function graph.
+
+db1.c is the file in which the de bruijn graph is construted.Using the k-mers obtained
+from the tree each k-mer is further split into k-1 mers.These k-1 mers are the graph nodes.
+For every equivalent k-1 mer the edge represents a k-mer.
+The function euler is called in this function to compute euler path.
+In the same file the funtion assemble simply merges the strings based on the euler path.
+
+euler1.c is the file in which euler path is computed using Fleury's algorithm.
+The start vertex begins from that vertex  u of odd degree and using a DFS search finds the
+next vertex v from u.
