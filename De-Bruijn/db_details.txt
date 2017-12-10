@@ -1,4 +1,6 @@
-This program has 5 files
+Authors : Raksha and Shobhana Ganesh
+
+This program directory has 5 files
 
 tree.h has all the function prototypes ,the structure required to build the tree and
 the header files stdio.h,string.h and stdlib.h
