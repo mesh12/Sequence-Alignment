@@ -1,3 +1,9 @@
+/*
+Authors : Raksha and Shobhana Ganesh
+Term : January 2015 - May 2015
+Analysis and design of algorithms project
+*/
+
 #include<stdio.h>
 #include<string.h>
 #include<sys/time.h>
